@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClubOrganiser.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout
+            VerticalOptions="CenterAndExpand">
             <Label
                 Text="Please Sign In!" 
                 HorizontalOptions="CenterAndExpand"/>
