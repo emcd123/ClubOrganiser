@@ -31,5 +31,24 @@ namespace ClubOrganiser
                 throw new InvalidOperationException("Cannot use PushAsync");
             }
         }
+
+        public async void OnLogout(object sender, System.EventArgs e)
+        {
+            try
+            {
+                await Navigation.PushModalAsync(new LoginPage());
+            }
+            catch (Exception)
+            {
+
+                throw new InvalidOperationException("Cannot Logout");
+            }
+        }
+
+        //This will override the Hardware Back button to deactivate it on this page.
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
     }
 }

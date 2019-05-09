@@ -29,5 +29,11 @@ namespace ClubOrganiser.Views
                 throw new InvalidOperationException("Cannot use PushAsync");
             }
         }
-	}
+
+        //This will override the Hardware Back button to deactivate it on this page.
+        protected override bool OnBackButtonPressed()
+        {
+            return true;
+        }
+    }
 }

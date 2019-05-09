@@ -9,7 +9,8 @@
         <Label Text="Welcome to Club Organiser!" 
            HorizontalOptions="Center"
            VerticalOptions="CenterAndExpand" />
-        <Button Text="Click Me" Clicked="Button_Clicked" />
+        <Button Text="Continue" Clicked="Button_Clicked" />
+        <Button Text="Logout" Clicked="OnLogout" />
     </StackLayout>
 
 </ContentPage>
