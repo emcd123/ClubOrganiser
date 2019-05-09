@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClubOrganiser.Views.LoginPage">
+    <ContentPage.Content>
+        <StackLayout
+            VerticalOptions="CenterAndExpand">
+            <Label
+                Text="Please Sign In!" 
+                HorizontalOptions="CenterAndExpand"/>
+
+            <Entry Placeholder="Enter Name"></Entry>
+            <Entry Placeholder="Password" IsPassword="True"></Entry>
+
+            <Button Text="Login" Clicked="DoLogin" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
