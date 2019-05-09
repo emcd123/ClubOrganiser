@@ -23,11 +23,10 @@ namespace ClubOrganiser.Views
             {
                 NavigationPage Page = new NavigationPage(new MainPage());
                 await Navigation.PushModalAsync(Page);
-
             }
             catch (Exception)
             {
-                throw;
+                throw new InvalidOperationException("Cannot use PushAsync");
             }
         }
 	}

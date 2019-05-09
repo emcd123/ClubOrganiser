@@ -16,12 +16,20 @@ namespace ClubOrganiser
             //Want the navigation bar hidden since the homepage has nothing to navigate to.           
             NavigationPage.SetHasNavigationBar(this, false);
         }
-        
+
         public async void Button_Clicked(object sender, System.EventArgs e)
         {
             //Using PushAsync to push from one NavigationPage to another. This will allow us a Back Button
             //on the navigation bar.
-            await Navigation.PushAsync(new NavigationPage( new SectionPage()));
+            try
+            {
+                await Navigation.PushAsync(new SectionPage());
+            }
+            catch (Exception)
+            {
+
+                throw new InvalidOperationException("Cannot use PushAsync");
+            }
         }
     }
 }
