@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubOrganiser.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,10 +16,9 @@ namespace ClubOrganiser
         }
 
         int count = 0;
-        void Button_Clicked(object sender, System.EventArgs e)
+        public async void Button_Clicked(object sender, System.EventArgs e)
         {
-            count++;
-            ((Button)sender).Text = $"You clicked {count} times.";
+            await Navigation.PushAsync(new NavigationPage( new SectionPage()));
         }
     }
 }

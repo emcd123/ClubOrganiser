@@ -20,8 +20,8 @@ namespace ClubOrganiser.Views
         public async void DoLogin(object sender, System.EventArgs e)
         {
             try
-            {                
-                await Navigation.PushModalAsync(new MainPage());
+            {
+                await Navigation.PushModalAsync(new NavigationPage( new MainPage()));
             }
             catch (Exception)
             {
