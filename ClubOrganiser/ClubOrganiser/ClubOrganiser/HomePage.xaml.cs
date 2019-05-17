@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubOrganiser.Views;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,26 +8,31 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace ClubOrganiser.Views
+namespace ClubOrganiser
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentPage
+	public partial class HomePage : ContentPage
 	{
-		public LoginPage ()
+		public HomePage ()
 		{
 			InitializeComponent ();
 		}
 
-        public async void DoLogin(object sender, System.EventArgs e)
+        public async void OnItemTapped(object sender, EventArgs args)
+        {
+            await Navigation.PushModalAsync(new SectionPage());
+        }
+
+        public async void OnLogout(object sender, System.EventArgs e)
         {
             try
             {
-                NavigationPage Page = new NavigationPage(new HomePage());
-                await Navigation.PushModalAsync(Page);
+                await Navigation.PushModalAsync(new LoginPage());
             }
             catch (Exception)
             {
-                throw new InvalidOperationException("Cannot use PushAsync");
+
+                throw new InvalidOperationException("Cannot Logout");
             }
         }
 

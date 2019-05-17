@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClubOrganiser.HomePage">
+
+
+
+    <ContentPage.Content>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout x:Name="TopLeft"
+                         Grid.Row="0"
+                         Grid.Column="0"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#6B2851">
+                <Label Text="Top Left"
+                       TextColor="White"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnItemTapped" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <!--Command="{Binding OnItemTapped}"-->
+
+            <StackLayout x:Name="TopRight"
+                         Grid.Row="0"
+                         Grid.Column="1"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#338F84">
+                <Label Text="Top Right"
+                       TextColor="White"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="MiddleLeft"
+                         Grid.Row="1"
+                         Grid.Column="0"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#338F84">
+                <Label Text="Middle Left"
+                       TextColor="White"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="CenterAndExpand" />
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="MiddleRight"
+                         Grid.Row="1"
+                         Grid.Column="1"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#6B2851">
+                <Label Text="Middle Right" 
+                       TextColor="White"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="BottomLeft"
+                         Grid.Row="2"
+                         Grid.Column="0"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#6B2851">
+                <Label Text="Bottom Left"
+                       TextColor="White"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="CenterAndExpand" />
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="BottomRight"
+                         Grid.Row="2"
+                         Grid.Column="1"
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
+                         BackgroundColor="#338F84">
+                <Label Text="Bottom Right"
+                       TextColor="White"
+                       VerticalOptions="EndAndExpand"
+                       HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
