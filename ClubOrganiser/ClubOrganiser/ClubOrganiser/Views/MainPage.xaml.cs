@@ -1,4 +1,5 @@
-﻿using ClubOrganiser.Views;
+﻿using ClubOrganiser.ViewModels;
+using ClubOrganiser.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,9 @@ namespace ClubOrganiser
         public MainPage()
         {
             InitializeComponent();
+
+
+
             //Want the navigation bar hidden since the homepage has nothing to navigate to.           
             NavigationPage.SetHasNavigationBar(this, false);
         }

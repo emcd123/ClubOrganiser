@@ -1,4 +1,5 @@
-﻿using ClubOrganiser.Views;
+﻿using ClubOrganiser.ViewModels;
+using ClubOrganiser.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,10 @@ namespace ClubOrganiser
 		public HomePage ()
 		{
 			InitializeComponent ();
-		}
+            //Initialise the viewmodel for this page
+            var vm = new HomePageViewModel();
+            BindingContext = vm;
+        }
 
         public async void OnItemTapped(object sender, EventArgs args)
         {
