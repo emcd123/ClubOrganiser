@@ -2,10 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClubOrganiser.HomePage">
-
-
-
     <ContentPage.Content>
+        
         <Grid RowSpacing="0" ColumnSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -16,100 +14,125 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
+            
+            <!--<ListView ItemsSource="{Binding HomePageTilesList}"
+              ItemSelected="OnListViewItemSelected">-->
+                
+                <!--<ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell Grid.Row="{Binding Row}"
+                             Grid.Column="{Binding Column}"  >
+                            <StackLayout x:Name="TopLeft" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding BackgroundColor}">
 
-            <StackLayout x:Name="TopLeft"
-                         Grid.Row="0"
-                         Grid.Column="0"
-                         VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="#6B2851">
-                <Label Text="Top Left"
-                       TextColor="White"
-                       VerticalOptions="EndAndExpand"
-                       HorizontalOptions="CenterAndExpand"/>
+                                <Label Text="{Binding Title}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                
+            </ListView>-->
+            <StackLayout x:Name="TopLeft" 
+                            Grid.Row="{Binding HomePageTilesList[0].Row}"
+                            Grid.Column="{Binding HomePageTilesList[0].Column}" 
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"                             
+                            BackgroundColor="{Binding HomePageTilesList[0].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[0].Title}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="OnItemTapped" NumberOfTapsRequired="1"/>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[0]}" NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
-            <!--Command="{Binding OnItemTapped}"-->
 
-            <StackLayout x:Name="TopRight"
-                         Grid.Row="0"
-                         Grid.Column="1"
-                         VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="#338F84">
-                <Label Text="Top Right"
-                       TextColor="White"
-                       VerticalOptions="EndAndExpand"
-                       HorizontalOptions="CenterAndExpand"/>
+            <StackLayout x:Name="TopRight" 
+                             Grid.Row="{Binding HomePageTilesList[1].Row}"
+                             Grid.Column="{Binding HomePageTilesList[1].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[1].BackgroundColor}">
 
+                <Label Text="{Binding HomePageTilesList[1].Title}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[1]}" NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
 
             <StackLayout x:Name="MiddleLeft"
-                         Grid.Row="1"
-                         Grid.Column="0"
-                         VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="#338F84">
-                <Label Text="Middle Left"
-                       TextColor="White"
-                       VerticalOptions="EndAndExpand"
-                       HorizontalOptions="CenterAndExpand" />
+                         Grid.Row="{Binding HomePageTilesList[2].Row}"
+                             Grid.Column="{Binding HomePageTilesList[2].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[2].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[2].Title}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
 
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[2]}" NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
 
             <StackLayout x:Name="MiddleRight"
-                         Grid.Row="1"
-                         Grid.Column="1"
-                         VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="#6B2851">
-                <Label Text="Middle Right" 
-                       TextColor="White"
-                       VerticalOptions="EndAndExpand"
-                       HorizontalOptions="CenterAndExpand"/>
+                         Grid.Row="{Binding HomePageTilesList[3].Row}"
+                             Grid.Column="{Binding HomePageTilesList[3].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[3].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[3].Title}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
 
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[3]}" NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
 
             <StackLayout x:Name="BottomLeft"
-                         Grid.Row="2"
-                         Grid.Column="0"
-                         VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="#6B2851">
-                <Label Text="Bottom Left"
-                       TextColor="White"
-                       VerticalOptions="EndAndExpand"
-                       HorizontalOptions="CenterAndExpand" />
+                        Grid.Row="{Binding HomePageTilesList[4].Row}"
+                             Grid.Column="{Binding HomePageTilesList[4].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[4].BackgroundColor}">
 
+                <Label Text="{Binding HomePageTilesList[4].Title}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[4]}" NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
 
             <StackLayout x:Name="BottomRight"
-                         Grid.Row="2"
-                         Grid.Column="1"
-                         VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand"
-                         BackgroundColor="#338F84">
-                <Label Text="Bottom Right"
-                       TextColor="White"
-                       VerticalOptions="EndAndExpand"
-                       HorizontalOptions="CenterAndExpand"/>
+                         Grid.Row="{Binding HomePageTilesList[5].Row}"
+                             Grid.Column="{Binding HomePageTilesList[5].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[5].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[5].Title}"
+                               TextColor="White"
+                               VerticalOptions="EndAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
 
                 <StackLayout.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding OnItemTapped}" NumberOfTapsRequired="1"/>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[5]}" NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
             </StackLayout>
         </Grid>

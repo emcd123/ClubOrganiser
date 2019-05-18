@@ -14,11 +14,10 @@ namespace ClubOrganiser.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        protected virtual void OnPropertyChanged()
+        protected virtual void OnPropertyChanged(string property)
         //[CallerMemberName] string propertyName = null)
         {
-            PropertyChanged?.Invoke(this,
-            new PropertyChangedEventArgs(""));
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
     }
 }

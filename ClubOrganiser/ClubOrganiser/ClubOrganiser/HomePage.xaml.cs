@@ -1,4 +1,5 @@
-﻿using ClubOrganiser.ViewModels;
+﻿using ClubOrganiser.ClientModels;
+using ClubOrganiser.ViewModels;
 using ClubOrganiser.Views;
 using System;
 using System.Collections.Generic;
@@ -22,9 +23,27 @@ namespace ClubOrganiser
             BindingContext = vm;
         }
 
-        public async void OnItemTapped(object sender, EventArgs args)
+        private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs args)
         {
-            await Navigation.PushModalAsync(new SectionPage());
+            (sender as ListView).SelectedItem = null;
+
+            if (args.SelectedItem != null)
+            {
+                HomePageTileItem tileData = args.SelectedItem as HomePageTileItem;
+                NavigationPage page = tileData.PageType;
+                await Navigation.PushModalAsync(page);
+            }
+        }
+
+        public async void OnItemTapped(object sender, TappedEventArgs args)
+        {
+            if (sender.ToString() != null)
+            {
+                var myObject = args.Parameter;
+                HomePageTileItem tileData = myObject as HomePageTileItem;
+                NavigationPage page = tileData.PageType;
+                await Navigation.PushModalAsync(page);
+            }
         }
 
         public async void OnLogout(object sender, System.EventArgs e)
