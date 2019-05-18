@@ -21,7 +21,7 @@ namespace ClubOrganiser.Views
         {
             try
             {
-                NavigationPage Page = new NavigationPage(new MainPage());
+                NavigationPage Page = new NavigationPage(new HomePage());
                 await Navigation.PushModalAsync(Page);
             }
             catch (Exception)

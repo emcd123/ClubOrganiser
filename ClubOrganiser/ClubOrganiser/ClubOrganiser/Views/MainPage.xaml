@@ -115,3 +115,25 @@
         </Grid>
     </ContentPage.Content>
 </ContentPage>
+<!--<ListView ItemsSource="{Binding HomePageTilesList}"
+              ItemSelected="OnListViewItemSelected">-->
+
+<!--<ListView.ItemTemplate>
+          <DataTemplate>
+              <ViewCell Grid.Row="{Binding Row}"
+                    Grid.Column="{Binding Column}"  >
+                  <StackLayout x:Name="TopLeft" 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"                             
+                    BackgroundColor="{Binding BackgroundColor}">
+
+                      <Label Text="{Binding Title}"
+                      TextColor="White"
+                      VerticalOptions="EndAndExpand"
+                      HorizontalOptions="CenterAndExpand"/>
+                  </StackLayout>
+              </ViewCell>
+          </DataTemplate>
+      </ListView.ItemTemplate>
+                
+  </ListView>-->
