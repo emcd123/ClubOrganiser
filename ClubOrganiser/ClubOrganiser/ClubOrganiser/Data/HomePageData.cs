@@ -17,7 +17,7 @@ namespace ClubOrganiser.Data
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 1,
-                Title = "Top Left",
+                Title = "Your Profile",
                 BackgroundColor = "#6B2851",
                 PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
                 Column = 0,
@@ -27,7 +27,7 @@ namespace ClubOrganiser.Data
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 2,
-                Title = "Top Right",
+                Title = "Your Next Session",
                 BackgroundColor = "#338F84",
                 PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
                 Column = 1,
@@ -37,9 +37,9 @@ namespace ClubOrganiser.Data
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 3,
-                Title = "Middle Left",
+                Title = "Your Competitions",
                 BackgroundColor = "#338F84",
-                PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
+                PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
                 Column = 0,
                 Row = 1
             });
@@ -47,7 +47,7 @@ namespace ClubOrganiser.Data
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 4,
-                Title = "Middle Right",
+                Title = "Your Program",
                 BackgroundColor = "#6B2851",
                 PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
                 Column = 1,
@@ -57,9 +57,9 @@ namespace ClubOrganiser.Data
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 5,
-                Title = "Bottom Left",
+                Title = "Club News",
                 BackgroundColor = "#6B2851",
-                PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
+                PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
                 Column = 0,
                 Row = 2
             });
@@ -67,9 +67,9 @@ namespace ClubOrganiser.Data
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 6,
-                Title = "Bottom Right",
+                Title = "Contact Coach",
                 BackgroundColor = "#338F84",
-                PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
+                PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
                 Column = 1,
                 Row = 2
             });
