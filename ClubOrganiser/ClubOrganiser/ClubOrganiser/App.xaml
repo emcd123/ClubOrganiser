@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:extensions="clr-namespace:ClubOrganiser.Utils"
              x:Class="ClubOrganiser.App">
     <Application.Resources>
         <ResourceDictionary>
@@ -27,6 +28,8 @@
                 <On Platform="iOS" 
           Value="FontAwesome5Free-Regular" />
             </OnPlatform>
+
+            <extensions:FontConverter x:Key="FontConverter"/>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

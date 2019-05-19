@@ -7,10 +7,6 @@
             <Label Text="Feature Coming Soon!"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
-            <Label Text="&#xf26e;;"
-                    FontFamily="{StaticResource FontAwesomeBrands}"
-                   TextColor="White"
-                   FontSize="36"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

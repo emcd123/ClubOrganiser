@@ -1,6 +1,7 @@
 ﻿using ClubOrganiser.ClientModels;
 using ClubOrganiser.Interfaces;
 using ClubOrganiser.Views;
+using FontAwesome;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -18,6 +19,8 @@ namespace ClubOrganiser.Data
             {
                 Id = 1,
                 Title = "Your Profile",
+                Icon = FontAwesomeIcons.User,
+                IconFamily = "FontAwesomeSolid",
                 BackgroundColor = "#6B2851",
                 PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
                 Column = 0,
