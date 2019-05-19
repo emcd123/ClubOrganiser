@@ -10,7 +10,8 @@ namespace ClubOrganiser.ClientModels
     {
         private int _id;
         private string _title;
-        private string _svgImage;
+        private string _icon;
+        private string _iconFamily;
         private string _backgroundColor;
         private NavigationPage _pageType;
         private int _column;
@@ -39,15 +40,27 @@ namespace ClubOrganiser.ClientModels
             }
         }
 
-        public string SvgImage
+        public string Icon
         {
             get
             {
-                return _svgImage;
+                return _icon;
             }
             set
             {
-                _svgImage = value;
+                _icon = value;
+            }
+        }
+
+        public string IconFamily
+        {
+            get
+            {
+                return _iconFamily;
+            }
+            set
+            {
+                _iconFamily = value;
             }
         }
 

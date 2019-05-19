@@ -9,7 +9,8 @@ namespace ClubOrganiser.Interfaces
     {
         int Id { get; set; }
         string Title { get; set; }
-        string SvgImage { get; set; }
+        string Icon { get; set; }
+        string IconFamily { get; set; }
         string BackgroundColor { get; set; }
         NavigationPage PageType { get; set; }
         int Column { get; set; }
