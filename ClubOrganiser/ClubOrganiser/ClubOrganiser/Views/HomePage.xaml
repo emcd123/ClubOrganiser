@@ -16,7 +16,7 @@
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <!--FontFamily="{Binding HomePageTilesList[0], Converter={StaticResource FontConverter}}"-->
-            <StackLayout x:Name="TopLeft" 
+            <StackLayout AutomationId="HelloLabel" x:Name="TopLeft" 
                             Grid.Row="{Binding HomePageTilesList[0].Row}"
                             Grid.Column="{Binding HomePageTilesList[0].Column}" 
                             VerticalOptions="FillAndExpand"
