@@ -9,10 +9,17 @@
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Feature Coming Soon!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout           
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
+            <Label
+                Text="&#xf6e3;"
+                FontFamily="{StaticResource FontAwesomeSolid}"
+                TextColor="Black"
+                FontSize="80"
+                HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Under Construction!" Margin="0,20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
