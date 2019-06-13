@@ -16,5 +16,18 @@ namespace ClubOrganiser.Views
         {
             InitializeComponent();
         }
+
+        public async void HomeButton_Activated(object sender, System.EventArgs e)
+        {
+            try
+            {
+                NavigationPage Page = new NavigationPage(new HomePage());
+                await Navigation.PushModalAsync(Page);
+            }
+            catch (Exception)
+            {
+                throw new InvalidOperationException("Cannot use PushAsync");
+            }
+        }
     }
 }
