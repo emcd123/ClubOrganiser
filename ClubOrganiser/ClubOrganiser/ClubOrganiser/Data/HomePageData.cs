@@ -32,6 +32,8 @@ namespace ClubOrganiser.Data
                 Id = 2,
                 Title = "Your Next Session",
                 BackgroundColor = "#338F84",
+                Icon = FontAwesomeIcons.ClipboardList,
+                IconFamily = "FontAwesomeSolid",
                 PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
                 Column = 1,
                 Row = 0
@@ -41,6 +43,8 @@ namespace ClubOrganiser.Data
             {
                 Id = 3,
                 Title = "Your Competitions",
+                Icon = FontAwesomeIcons.Calendar,
+                IconFamily = "FontAwesomeSolid",
                 BackgroundColor = "#338F84",
                 PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
                 Column = 0,
@@ -52,6 +56,8 @@ namespace ClubOrganiser.Data
                 Id = 4,
                 Title = "Your Program",
                 BackgroundColor = "#6B2851",
+                Icon = FontAwesomeIcons.ClipboardList,
+                IconFamily = "FontAwesomeSolid",
                 PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
                 Column = 1,
                 Row = 1
@@ -62,6 +68,8 @@ namespace ClubOrganiser.Data
                 Id = 5,
                 Title = "Club News",
                 BackgroundColor = "#6B2851",
+                Icon = FontAwesomeIcons.ExclamationCircle,
+                IconFamily = "FontAwesomeSolid",
                 PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
                 Column = 0,
                 Row = 2
@@ -72,6 +80,8 @@ namespace ClubOrganiser.Data
                 Id = 6,
                 Title = "Contact Coach",
                 BackgroundColor = "#338F84",
+                Icon = FontAwesomeIcons.Envelope,
+                IconFamily = "FontAwesomeSolid",
                 PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
                 Column = 1,
                 Row = 2
