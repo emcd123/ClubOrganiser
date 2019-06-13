@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClubOrganiser.HomePage"
+             xmlns:fontawesome="clr-namespace:FontAwesome">
+    <ContentPage.Content>
+        
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <!--FontFamily="{Binding HomePageTilesList[0], Converter={StaticResource FontConverter}}"-->
+            <StackLayout AutomationId="HelloLabel" x:Name="TopLeft" 
+                            Grid.Row="{Binding HomePageTilesList[0].Row}"
+                            Grid.Column="{Binding HomePageTilesList[0].Column}" 
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"                             
+                            BackgroundColor="{Binding HomePageTilesList[0].BackgroundColor}">
+                <Label Text="{Binding HomePageTilesList[0].Icon}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    TextColor="White"
+                    FontSize="36"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                
+                <Label Text="{Binding HomePageTilesList[0].Title}"
+                               TextColor="White"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[0]}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="TopRight" 
+                             Grid.Row="{Binding HomePageTilesList[1].Row}"
+                             Grid.Column="{Binding HomePageTilesList[1].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[1].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[1].Icon}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    TextColor="White"
+                    FontSize="36"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                
+                <Label Text="{Binding HomePageTilesList[1].Title}"
+                               TextColor="White"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[1]}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="MiddleLeft"
+                         Grid.Row="{Binding HomePageTilesList[2].Row}"
+                             Grid.Column="{Binding HomePageTilesList[2].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[2].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[2].Icon}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    TextColor="White"
+                    FontSize="36"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                
+                <Label Text="{Binding HomePageTilesList[2].Title}"
+                               TextColor="White"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[2]}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="MiddleRight"
+                         Grid.Row="{Binding HomePageTilesList[3].Row}"
+                             Grid.Column="{Binding HomePageTilesList[3].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[3].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[3].Icon}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    TextColor="White"
+                    FontSize="36"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                
+                <Label Text="{Binding HomePageTilesList[3].Title}"
+                               TextColor="White"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[3]}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="BottomLeft"
+                        Grid.Row="{Binding HomePageTilesList[4].Row}"
+                             Grid.Column="{Binding HomePageTilesList[4].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[4].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[4].Icon}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    TextColor="White"
+                    FontSize="36"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                
+                <Label Text="{Binding HomePageTilesList[4].Title}"
+                               TextColor="White"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[4]}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout x:Name="BottomRight"
+                         Grid.Row="{Binding HomePageTilesList[5].Row}"
+                             Grid.Column="{Binding HomePageTilesList[5].Column}" 
+                             VerticalOptions="FillAndExpand"
+                             HorizontalOptions="FillAndExpand"                             
+                             BackgroundColor="{Binding HomePageTilesList[5].BackgroundColor}">
+
+                <Label Text="{Binding HomePageTilesList[5].Icon}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    TextColor="White"
+                    FontSize="36"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                
+                <Label Text="{Binding HomePageTilesList[5].Title}"
+                               TextColor="White"
+                               VerticalOptions="CenterAndExpand"
+                               HorizontalOptions="CenterAndExpand"/>
+
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnItemTapped" CommandParameter="{Binding HomePageTilesList[5]}" NumberOfTapsRequired="1"/>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

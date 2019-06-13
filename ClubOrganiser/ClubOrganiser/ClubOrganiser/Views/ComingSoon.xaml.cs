@@ -9,13 +9,13 @@ using Xamarin.Forms.Xaml;
 
 namespace ClubOrganiser.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SectionPage : ContentPage
-	{
-		public SectionPage ()
-		{
-			InitializeComponent ();
-		}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ComingSoon : ContentPage
+    {
+        public ComingSoon()
+        {
+            InitializeComponent();
+        }
 
         public async void HomeButton_Activated(object sender, System.EventArgs e)
         {
@@ -29,6 +29,5 @@ namespace ClubOrganiser.Views
                 throw new InvalidOperationException("Cannot use PushAsync");
             }
         }
-
     }
 }
