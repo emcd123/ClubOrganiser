@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubOrganiser.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace ClubOrganiser.Views
 		public LoginPage ()
 		{
 			InitializeComponent ();
+            var vm = new LoginViewModel();
+            BindingContext = vm;
 		}
 
         public async void DoLogin(object sender, System.EventArgs e)

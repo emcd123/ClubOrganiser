@@ -1,18 +1,81 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:enhancedEntry="clr-namespace:LeoJHarris.FormsPlugin.Abstractions;assembly=LeoJHarris.FormsPlugin.Abstractions"
              x:Class="ClubOrganiser.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout
-            VerticalOptions="CenterAndExpand">
-            <Label
-                Text="Please Sign In!" 
-                HorizontalOptions="CenterAndExpand"/>
+        <Grid RowSpacing="0" ColumnSpacing="0"
+              Padding="40,0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
 
-            <Entry Placeholder="Enter Name"></Entry>
-            <Entry Placeholder="Password" IsPassword="True"></Entry>
+            <StackLayout
+                Grid.Row="0"
+                Grid.Column="0"                
+                VerticalOptions="CenterAndExpand">
 
-            <Button Text="Login" Clicked="DoLogin" />
-        </StackLayout>
+                <Label Text="{Binding BrandIcon}"
+                    FontFamily="{StaticResource FontAwesomeBrands}"
+                    TextColor="Black"
+                    FontSize="160"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Center"/>
+                
+            </StackLayout>
+
+
+            <StackLayout
+                Grid.Row="1"
+                Grid.Column="0"                
+                VerticalOptions="CenterAndExpand">
+
+                <enhancedEntry:EnhancedEntry
+                    Placeholder="UserName"
+                    LeftIcon = "user"
+                    Keyboard = "Email"
+                    BackgroundColor="White"
+                    BorderColor = "Black"
+                    BorderWidth = "2"
+                    CornerRadius="20"/>
+
+                <enhancedEntry:EnhancedEntry
+                    Placeholder="Password"
+                    LeftIcon = "password"
+                    IsPassword="True"
+                    BackgroundColor="White"                    
+                    BorderColor = "Black"
+                    BorderWidth = "2"/>
+
+                <Button
+                    Text="Sign In"
+                    BackgroundColor="#6b2851"
+                    TextColor="White"
+                    BorderRadius="10"
+                    Clicked="DoLogin" />
+
+                <Label
+                    Text="Don't have an account, SIGN UP HERE!"/>
+            </StackLayout>
+
+
+            <StackLayout
+                Grid.Row="2"
+                Grid.Column="0"                
+                VerticalOptions="EndAndExpand"
+                HorizontalOptions="CenterAndExpand">
+                
+                <Label
+                    Text="Debug: Version 0.0.1" 
+                    HorizontalOptions="CenterAndExpand"/>
+                
+            </StackLayout>
+            
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
