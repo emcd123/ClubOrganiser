@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClubOrganiser.ViewModels;
+using LeoJHarris.FormsPlugin.Abstractions.Effects;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +17,11 @@ namespace ClubOrganiser.Views
 		public LoginPage ()
 		{
 			InitializeComponent ();
-		}
+            var vm = new LoginViewModel();
+            BindingContext = vm;
+            PasswordField.Effects.Add( new ShowHiddenEntryEffect());
+
+        }
 
         public async void DoLogin(object sender, System.EventArgs e)
         {

@@ -2,11 +2,24 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClubOrganiser.Views.ComingSoon">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Name="HomeButton" Order="Primary" Text="Home" Priority="0"
+                    Clicked="HomeButton_Activated"/>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Feature Coming Soon!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout           
+            VerticalOptions="CenterAndExpand"
+            HorizontalOptions="CenterAndExpand">
+            <Label
+                Text="&#xf6e3;"
+                FontFamily="{StaticResource FontAwesomeSolid}"
+                TextColor="Black"
+                FontSize="80"
+                HorizontalOptions="CenterAndExpand"/>
+
+            <Label Text="Under Construction!" Margin="0,20"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

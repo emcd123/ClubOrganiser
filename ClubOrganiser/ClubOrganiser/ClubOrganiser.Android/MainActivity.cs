@@ -19,6 +19,7 @@ namespace ClubOrganiser.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            LeoJHarris.FormsPlugin.Droid.EnhancedEntryRenderer.Init(this);
             LoadApplication(new App());
         }
     }
