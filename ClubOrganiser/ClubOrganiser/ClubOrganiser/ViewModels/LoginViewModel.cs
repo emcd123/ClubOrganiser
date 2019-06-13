@@ -2,6 +2,7 @@
 using ClubOrganiser.Data;
 using ClubOrganiser.Interfaces;
 using ClubOrganiser.Views;
+using LeoJHarris.FormsPlugin.Abstractions.Effects;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,7 +16,6 @@ namespace ClubOrganiser.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         private string _brandIcon;
-
         public string BrandIcon
         {
             get { return _brandIcon; }
@@ -25,6 +25,18 @@ namespace ClubOrganiser.ViewModels
                 OnPropertyChanged("BrandIcon");
             }
         }
+
+        //private Effect _showHiddenEntry;
+        //public Effect ShowHiddenEntry
+        //{
+        //    get { return new ShowHiddenEntryEffect(); }
+        //    //set
+        //    //{
+        //    //    _showHiddenEntry = value;
+        //    //    OnPropertyChanged("ShowHiddenEntry");
+        //    //}
+        //}
+
         public LoginViewModel()
         {
             BrandIcon = FontAwesome.FontAwesomeIcons.Android;
