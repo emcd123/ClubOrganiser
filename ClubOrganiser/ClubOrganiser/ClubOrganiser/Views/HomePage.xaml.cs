@@ -41,7 +41,7 @@ namespace ClubOrganiser
             {
                 var myObject = args.Parameter;
                 HomePageTileItem tileData = myObject as HomePageTileItem;
-                NavigationPage page = tileData.PageType;
+                Page page = tileData.PageType;
                 await Navigation.PushModalAsync(page);
             }
         }
