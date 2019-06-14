@@ -15,6 +15,12 @@ namespace ClubOrganiser.Views
 		public AthleteProfileHistoryPage ()
 		{
 			InitializeComponent ();
-		}
-	}
+            var inherited_vm = this.BindingContext;
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
+    }
 }

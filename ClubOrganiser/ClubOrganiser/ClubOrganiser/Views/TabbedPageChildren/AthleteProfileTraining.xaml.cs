@@ -15,6 +15,7 @@ namespace ClubOrganiser.Views
 		public AthleteProfileTraining ()
 		{
 			InitializeComponent ();
-		}
+            var inherited_vm = this.BindingContext;
+        }
 	}
 }
