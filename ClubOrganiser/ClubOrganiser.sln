@@ -11,7 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubOrganiser", "ClubOrgani
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClubOrganiser.UITest", "ClubOrganiser\ClubOrganiser.UITest\ClubOrganiser.UITest.csproj", "{B19C892E-2628-4CA7-AD27-08D406A3B14B}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ClubRestAPI.DataModels", "..\..\ClubRestAPI\ClubRestAPI.DataModels\ClubRestAPI.DataModels.shproj", "{ED1FB52F-795B-497E-AB1D-61EA9AA134C7}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		..\..\ClubRestAPI\ClubRestAPI.DataModels\ClubRestAPI.DataModels.projitems*{ed1fb52f-795b-497e-ab1d-61ea9aa134c7}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone
