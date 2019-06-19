@@ -22,7 +22,7 @@ namespace ClubOrganiser.Data
                 Icon = FontAwesomeIcons.User,
                 IconFamily = "FontAwesomeSolid",
                 BackgroundColor = "#6B2851",
-                PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
+                PageType = new Xamarin.Forms.NavigationPage(new AthleteProfilePage()),
                 Column = 0,
                 Row = 0
             });

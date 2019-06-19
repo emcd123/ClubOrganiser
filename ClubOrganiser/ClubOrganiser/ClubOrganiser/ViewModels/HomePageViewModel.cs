@@ -26,6 +26,19 @@ namespace ClubOrganiser.ViewModels
             }
         }
 
+        public Command TapCommand
+        {
+            get
+            {
+                return new Command(async val => {
+                    HomePageTileItem tileData = val as HomePageTileItem;
+                    Page page = tileData.PageType;
+                    await App.Current.MainPage.Navigation.PushModalAsync(page);
+                });
+            }
+        }
+
+
         public HomePageViewModel()
         {
             this.HomePageTilesList = HomePageData.CreateHomePageTileList();

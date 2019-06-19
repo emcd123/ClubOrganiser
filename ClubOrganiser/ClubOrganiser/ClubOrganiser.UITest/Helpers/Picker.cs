@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UITest.Interfaces;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
@@ -15,7 +14,7 @@ namespace UITest.Helpers
     /// Used to interact with any picker present in the app.
     /// <para>Currently only works on Android</para>
     /// </summary>
-    public class Picker : IPickable
+    public class Picker /*: IPickable*/
     {
         private static IApp app;
         private bool _android;
@@ -67,8 +66,8 @@ namespace UITest.Helpers
         /// </summary>
         public void OpenPicker()
         {
-            app.WaitForElement(x => x.Marked(AutomationIdStore.DurationPickerId));
-            app.Tap(x => x.Marked(AutomationIdStore.DurationPickerId).Child(0));
+            //app.WaitForElement(x => x.Marked(AutomationIdStore.DurationPickerId));
+            //app.Tap(x => x.Marked(AutomationIdStore.DurationPickerId).Child(0));
         }
 
         /// <summary>
