@@ -4,7 +4,6 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using UITest.Interfaces;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
@@ -171,7 +170,7 @@ namespace UITest.Helpers
         public static void NavigateToSideBar()
         {
             OpenSidebar();
-            if (!app.Query(x => x.Marked(AutomationIdStore.CompanyLogoTestId)).Any())
+            if (!app.Query(x => x.Marked(AutomationIdStore.Hamburger)).Any())
             {
                 Console.WriteLine("Sidebar could not be opened");
             }

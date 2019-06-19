@@ -5,7 +5,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using UITest.Helpers;
-using UITest.Interfaces;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
