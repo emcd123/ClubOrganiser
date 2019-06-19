@@ -14,7 +14,8 @@ namespace UITest
     /// </summary>
     public static class CommonStringStore
     {
-
+        public static string Home = "Home";
+        public static string HomeButton = "Home";
     }
 
     /// <summary>
@@ -25,6 +26,7 @@ namespace UITest
     /// </summary>
     public static class AutomationIdStore
     {
+        public static string Hamburger = "HamburgerId";
     }
 
     /// <summary>
