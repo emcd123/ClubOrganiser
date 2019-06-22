@@ -14,6 +14,7 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClubOrganiser.DataStore", "ClubOrganiser.DataStore\ClubOrganiser.DataStore.csproj", "{2268852A-23BB-464D-B0D2-AD9B9CC2E052}"
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ClubRestAPI.DataModels", "..\..\..\..\..\..\git\ClubRestAPI\ClubRestAPI.DataModels\ClubRestAPI.DataModels.shproj", "{ED1FB52F-795B-497E-AB1D-61EA9AA134C7}"
+
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution

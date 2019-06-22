@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStores.Mock
 {
-    public class MockStore<T> : IBaseStore<T>
+    public class MockBaseStore<T> : IBaseStore<T>
     {
         #region IBaseStore implementation
 
