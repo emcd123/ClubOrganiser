@@ -39,11 +39,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AbstractSetup.cs" />
+    <Compile Include="BasePage.cs" />
     <Compile Include="Helpers\Navigation.cs" />
     <Compile Include="Helpers\Picker.cs" />
     <Compile Include="Helpers\Queries.cs" />
     <Compile Include="Helpers\Screenshot.cs" />
-    <Compile Include="HerlperInit.cs" />
+    <Compile Include="Helpers\HerlperInit.cs" />
     <Compile Include="TestDataStores.cs" />
     <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
