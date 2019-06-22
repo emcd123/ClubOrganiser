@@ -10,6 +10,10 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='UITEST|AnyCPU'">
+    <DefineConstants>TRACE;UITEST</DefineConstants>
+  </PropertyGroup>
+
   <ItemGroup>
     <PackageReference Include="LeoJHarris.XForms.Plugin.EnhancedEntry" Version="1.0.6" />
     <PackageReference Include="Microsoft.Azure.Mobile.Client" Version="4.1.1" />
@@ -44,10 +48,6 @@
     <EmbeddedResource Update="Views\SectionPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Helpers\" />
   </ItemGroup>
 
   <ItemGroup>

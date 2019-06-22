@@ -1,4 +1,5 @@
-﻿using DataStores.Interfaces;
+﻿using ClubOrganiser.DataStore.Interfaces;
+using DataStores.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -29,8 +30,8 @@ namespace ClubOrganiser.DataStores.Mock
             return Task.FromResult(true);
         }
 
-        //INotificationStore notificationStore;
-        //public INotificationStore NotificationStore => notificationStore ?? (notificationStore = DependencyService.Get<INotificationStore>());
+        IAthleteStore athleteStore;
+        public IAthleteStore AthleteStore => athleteStore ?? (athleteStore = new MockAthleteStore());
 
 
     }
