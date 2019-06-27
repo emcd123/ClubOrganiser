@@ -30,7 +30,6 @@ namespace ClubOrganiser.ViewModels
                 OnPropertyChanged("ProfileIcon");
             }
         }
-
         public AthleteProfileViewModel()
         {
             AthleteDetails = MockData.GetMockProfile();
