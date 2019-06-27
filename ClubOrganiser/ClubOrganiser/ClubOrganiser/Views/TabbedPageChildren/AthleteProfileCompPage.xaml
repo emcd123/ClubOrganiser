@@ -3,10 +3,109 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClubOrganiser.Views.AthleteProfileCompPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid RowSpacing="0" ColumnSpacing="0"                  
+                Grid.Column="0"
+                Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="0">
+                    <Label Text="{Binding ProfileIcon}"                       
+                    FontFamily="{StaticResource FontAwesomeRegular}"
+                    TextColor="Black"
+                    FontSize="80"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal"
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="StartAndExpand">
+                    <Label
+                        Text="Name:"/>
+                    <Label
+                        HorizontalOptions="EndAndExpand"
+                        Text="{Binding AthleteDetails.Name}"/>
+                </StackLayout>
+            </Grid>
+
+            <StackLayout                
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Padding="30,0"
+                    Spacing="20">
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="20">
+                    <Label
+                        Text="Weight Class:"/>
+                    <Label
+                        HorizontalOptions="EndAndExpand"
+                        Text="{Binding AthleteDetails.WeightClass}"/>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="20">
+                    <Label
+                            Text="Snatch:"/>
+                    <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxCompetitionSnatch}"/>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="20">
+                    <Label
+                            Text="Clean and Jerk:"/>
+                    <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxCompetitionCJ}"/>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="20">
+                    <Label
+                            Text="Total:"/>
+                    <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxCompetitionTotal}"/>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal"
+                    Spacing="20">
+
+                    <Label
+                            Text="Sinclair:"/>
+                    <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.SinclairCompetition}"/>
+                </StackLayout>
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
