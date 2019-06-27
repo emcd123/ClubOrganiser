@@ -32,80 +32,55 @@
                 HorizontalOptions="CenterAndExpand"
                 VerticalOptions="StartAndExpand">
 
-                <Grid RowSpacing="10" ColumnSpacing="0">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
-                    </Grid.ColumnDefinitions>
-                    
+                <StackLayout
+                    Orientation="Horizontal">
                     <Label
-                        Grid.Column="0"
-                        Grid.Row="0"
                         Text="Name:"/>
 
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="1"
-                        Text="Weight Class:"/>
-
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="2"
-                        Text="Snatch:"/>
-
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="3"
-                        Text="Clean and Jerk:"/>
-
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="4"
-                        Text="Squat:"/>
-
-                    <Label
-                        Grid.Column="0"
-                        Grid.Row="5"
-                        Text="Front Squat:"/>
-
-
-                    <Label
-                        Grid.Column="1"
-                        Grid.Row="0"                        
+                    <Label                     
                         Text="{Binding AthleteDetails.Name}"/>
+                </StackLayout>
 
+                <StackLayout
+                    Orientation="Horizontal">
                     <Label
-                        Grid.Column="1"
-                        Grid.Row="1"
+                        Text="Weight Class:"/>
+                    <Label
                         Text="{Binding AthleteDetails.WeightClass}"/>
+                </StackLayout>
 
+                <StackLayout
+                    Orientation="Horizontal">
                     <Label
-                        Grid.Column="1"
-                        Grid.Row="2"
+                        Text="Snatch:"/>
+                    <Label
                         Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
+                </StackLayout>
 
+                <StackLayout
+                    Orientation="Horizontal">
                     <Label
-                        Grid.Column="1"
-                        Grid.Row="3"
-                        Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
+                        Text="Clean and Jerk:"/>
+                    <Label
+                        Text="{Binding AthleteDetails.MaxTrainingCJ}"/>
+                </StackLayout>
 
+                <StackLayout
+                    Orientation="Horizontal">
                     <Label
-                        Grid.Column="1"
-                        Grid.Row="4"
+                        Text="Squat:"/>
+                    <Label
                         Text="{Binding AthleteDetails.MaxSquat}"/>
+                </StackLayout>
+
+                <StackLayout
+                    Orientation="Horizontal">
 
                     <Label
-                        Grid.Column="1"
-                        Grid.Row="5"
+                        Text="Front Squat:"/>
+                    <Label
                         Text="{Binding AthleteDetails.MaxFrontSquat}"/>
-                </Grid>
+                </StackLayout>
             </StackLayout>
 
         </Grid>
