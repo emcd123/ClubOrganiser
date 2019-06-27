@@ -30,6 +30,7 @@ namespace ClubOrganiser.DataStore.Mock
                 MaxTrainingCJ = 120,
                 MaxTrainingTotal = 210
             });
+            await Task.Delay(100);
         }
 
         public override async Task<IEnumerable<Athlete>> GetItemsAsync(bool forceRefresh = false)

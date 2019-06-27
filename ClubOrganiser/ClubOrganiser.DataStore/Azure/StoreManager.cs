@@ -217,6 +217,7 @@ namespace ClubOrganiser.DataStores.Azure
             //        await SaveSettingsAsync(settings);
             //    }
             //}
+            await Task.Delay(100);
         }
 
         public class StoreSettings

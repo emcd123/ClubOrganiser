@@ -3,10 +3,111 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClubOrganiser.Views.AthleteProfileTraining">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout
+                Grid.Column="0"
+                Grid.Row="0"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+
+                <Label Text="{Binding ProfileIcon}"                       
+                    FontFamily="{StaticResource FontAwesomeRegular}"
+                    TextColor="Black"
+                    FontSize="150"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <StackLayout                
+                Grid.Column="0"
+                Grid.Row="1"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="StartAndExpand">
+
+                <Grid RowSpacing="10" ColumnSpacing="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="0"
+                        Text="Name:"/>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Weight Class:"/>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Snatch:"/>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="3"
+                        Text="Clean and Jerk:"/>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="4"
+                        Text="Squat:"/>
+
+                    <Label
+                        Grid.Column="0"
+                        Grid.Row="5"
+                        Text="Front Squat:"/>
+
+
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="0"                        
+                        Text="{Binding AthleteDetails.Name}"/>
+
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="1"
+                        Text="{Binding AthleteDetails.WeightClass}"/>
+
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="2"
+                        Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
+
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="3"
+                        Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
+
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="4"
+                        Text="{Binding AthleteDetails.MaxSquat}"/>
+
+                    <Label
+                        Grid.Column="1"
+                        Grid.Row="5"
+                        Text="{Binding AthleteDetails.MaxFrontSquat}"/>
+                </Grid>
+            </StackLayout>
+
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
