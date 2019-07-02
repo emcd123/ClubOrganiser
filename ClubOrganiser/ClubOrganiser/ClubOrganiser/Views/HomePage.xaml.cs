@@ -23,17 +23,17 @@ namespace ClubOrganiser
             BindingContext = vm;
         }
 
-        private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs args)
-        {
-            (sender as ListView).SelectedItem = null;
+        //private async void OnListViewItemSelected(object sender, SelectedItemChangedEventArgs args)
+        //{
+        //    (sender as ListView).SelectedItem = null;
 
-            if (args.SelectedItem != null)
-            {
-                HomePageTileItem tileData = args.SelectedItem as HomePageTileItem;
-                NavigationPage page = tileData.PageType;
-                await Navigation.PushModalAsync(page);
-            }
-        }
+        //    if (args.SelectedItem != null)
+        //    {
+        //        HomePageTileItem tileData = args.SelectedItem as HomePageTileItem;
+        //        NavigationPage page = tileData.PageType;
+        //        await Navigation.PushModalAsync(page);
+        //    }
+        //}
 
         public async void OnItemTapped(object sender, TappedEventArgs args)
         {

@@ -17,7 +17,11 @@ namespace ClubOrganiser.Data
                 MaxTrainingCJ = 120,
                 MaxTrainingTotal = 210,
                 MaxSquat = 170,
-                MaxFrontSquat = 160
+                MaxFrontSquat = 160,
+                MaxPowerCJ = 105,
+                MaxPowerSnatch = 85,
+                RackJerk = 120,
+                PowerJerk = 115
             };
         }
     }

@@ -1,6 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ClubOrganiser"
+             xmlns:ffimageloadingsvg="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
              x:Class="ClubOrganiser.Views.AthleteProfileTraining">
     <ContentPage.Content>
         <Grid RowSpacing="0" ColumnSpacing="0">
@@ -34,16 +37,28 @@
                     HorizontalOptions="CenterAndExpand"/>
                 </StackLayout>
 
-                <StackLayout Orientation="Horizontal"
+                <StackLayout
                     Grid.Row="0"
-                    Grid.Column="1"
-                    VerticalOptions="CenterAndExpand"
-                    HorizontalOptions="StartAndExpand">
-                    <Label
-                        Text="Name:"/>
-                    <Label
-                        HorizontalOptions="EndAndExpand"
-                        Text="{Binding AthleteDetails.Name}"/>
+                    Grid.Column="1"                                           
+                    VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" 
+                        HorizontalOptions="StartAndExpand">
+                        <Label
+                            Text="Name:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.Name}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        HorizontalOptions="StartAndExpand"
+                        Orientation="Horizontal">
+                        <Label
+                                Text="Weight Class:"/>
+                        <Label
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding AthleteDetails.WeightClass}"/>
+                    </StackLayout>
                 </StackLayout>
             </Grid>
 
@@ -65,15 +80,6 @@
                     Spacing="20">
 
                     <StackLayout
-                    Orientation="Horizontal">
-                        <Label
-                        Text="Weight Class:"/>
-                        <Label
-                        HorizontalOptions="EndAndExpand"
-                        Text="{Binding AthleteDetails.WeightClass}"/>
-                    </StackLayout>
-
-                    <StackLayout
                         Orientation="Horizontal">
                         <Label
                             Text="Snatch:"/>
@@ -120,51 +126,48 @@
                     VerticalOptions="StartAndExpand"
                     Padding="30,0"
                     Spacing="20">
-                        <StackLayout
+                    <StackLayout
                             Orientation="Horizontal">
-                            <Label
-                            Text="Weight Class:"/>
-                            <Label
+                        <Label
+                            Text="Power Snatch:"/>
+                        <Label
                             HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.WeightClass}"/>
-                        </StackLayout>
-
-                        <StackLayout
-                        Orientation="Horizontal">
-                            <Label
-                            Text="Snatch:"/>
-                            <Label
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
-                        </StackLayout>
-
-                        <StackLayout
-                        Orientation="Horizontal">
-                            <Label
-                            Text="Clean and Jerk:"/>
-                            <Label
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.MaxTrainingCJ}"/>
-                        </StackLayout>
-
-                        <StackLayout
-                        Orientation="Horizontal">
-                            <Label
-                            Text="Squat:"/>
-                            <Label
-                            HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.MaxSquat}"/>
-                        </StackLayout>
+                            Text="{Binding AthleteDetails.MaxPowerSnatch}"/>
+                    </StackLayout>
 
                     <StackLayout
                         Orientation="Horizontal">
-
                         <Label
-                            Text="Front Squat:"/>
+                            Text="Power Clean/Jerk:"/>
                         <Label
                             HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.MaxFrontSquat}"/>
+                            Text="{Binding AthleteDetails.MaxPowerCJ}"/>
                     </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            Text="Rack Jerk:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.RackJerk}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            Text="Power Jerk:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.PowerJerk}"/>
+                    </StackLayout>
+
+                    <ffimageloadingsvg:SvgCachedImage WidthRequest="40" HeightRequest="40" Source="resource://ClubOrganiser.Images.edit.svg" BackgroundColor="#AC172A">
+                        <ffimageloadingsvg:SvgCachedImage.Transformations>
+                            <fftransformations:RoundedTransformation Radius="10"/>
+                        </ffimageloadingsvg:SvgCachedImage.Transformations>
+                    </ffimageloadingsvg:SvgCachedImage>
+
                 </StackLayout>
             </Grid>
         </Grid>

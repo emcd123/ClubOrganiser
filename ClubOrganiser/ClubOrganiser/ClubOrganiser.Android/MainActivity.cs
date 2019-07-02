@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using FFImageLoading.Forms.Platform;
 
 namespace ClubOrganiser.Droid
 {
@@ -20,6 +21,7 @@ namespace ClubOrganiser.Droid
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             LeoJHarris.FormsPlugin.Droid.EnhancedEntryRenderer.Init(this);
+            CachedImageRenderer.Init(true);
             LoadApplication(new App());
         }
     }
