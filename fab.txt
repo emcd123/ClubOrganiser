@@ -1,0 +1,31 @@
+
+/* IN App.xaml */
+<Style
+	x:Key="FabStyle"
+	TargetType="VisualElement">
+         <Setter
+		Property="effects:Effects.Shadow"
+		Value="True" />
+          <Setter
+		Property="effects:Effects.ShadowSize"
+		Value="9" />
+          <Setter
+		Property="effects:Effects.ShadowIOSColor"
+		Value="#77000000" />
+</Style>
+
+/* In page needing FAB */
+xmlns:svg="clr-namespace:XamSvg.XamForms;assembly=XamSvg.XamForms"
+
+                        <svg:SvgImage
+                            HorizontalOptions="End"                                
+                            Command="{Binding InviteFriendCommand}"
+                            x:Name="AddFriendFab"
+                            HeightRequest="{artina:OnOrientationDouble Default=80,
+                                PortraitTablet=90,
+                                LandscapeTablet=90}"
+                            Svg="res:images.add-friend-icon"
+                            AbsoluteLayout.LayoutBounds="1,1,-1,-1"
+                            AbsoluteLayout.LayoutFlags="PositionProportional"
+                            Margin="0,0,25,10"
+                            Style="{DynamicResource FabStyle}">
