@@ -173,7 +173,9 @@
                     TextColor="White"
                     WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60"
                     BackgroundColor="#AC172A" 
-                    BorderRadius="30"/>
+                    BorderRadius="30"
+                    Clicked="OnEditClicked"
+                    />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
