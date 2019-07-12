@@ -17,5 +17,10 @@ namespace ClubOrganiser.Views
 			InitializeComponent ();
             var inherited_vm = this.BindingContext;
         }
-	}
+
+        public async void OnEditClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new EditProfileTrainingPage());
+        }
+    }
 }

@@ -16,6 +16,12 @@ namespace UITest
     {
         public static string Home = "Home";
         public static string HomeButton = "Home";
+        public static string YourProfile = "Your Profile";
+        public static string NextSession = "Your Next Session";
+        public static string Competitions = "Your Competitions";
+        public static string Programs = "Your Programs";
+        public static string News = "Club News";
+        public static string Contact = "Contact Coach";
     }
 
     /// <summary>
@@ -27,8 +33,10 @@ namespace UITest
     public static class AutomationIdStore
     {
         public static string Hamburger = "HamburgerId";
+        public static string Home = "HomeId";
     }
 
+    #region Not Implemented yet
     /// <summary>
     /// Contains all valid appcenter-cli test suites categories for this project.
     /// <para>
@@ -54,6 +62,6 @@ namespace UITest
     /// </summary>
     public static class QueryStrings
     {
-
     }
+    #endregion
 }

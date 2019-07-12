@@ -1,12 +1,182 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ClubOrganiser"
              x:Class="ClubOrganiser.Views.AthleteProfileTraining">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid RowSpacing="0" ColumnSpacing="0"                  
+                Grid.Column="0"
+                Grid.Row="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="0">
+                    <Label Text="{Binding ProfileIcon}"                       
+                    FontFamily="{StaticResource FontAwesomeRegular}"
+                    TextColor="Black"
+                    FontSize="80"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+
+                <StackLayout
+                    Grid.Row="0"
+                    Grid.Column="1"                                           
+                    VerticalOptions="CenterAndExpand">
+                    <StackLayout Orientation="Horizontal" 
+                        HorizontalOptions="StartAndExpand">
+                        <Label
+                            Text="Name:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.Name}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        HorizontalOptions="StartAndExpand"
+                        Orientation="Horizontal">
+                        <Label
+                                Text="Weight Class:"/>
+                        <Label
+                                HorizontalOptions="EndAndExpand"
+                                Text="{Binding AthleteDetails.WeightClass}"/>
+                    </StackLayout>
+                </StackLayout>
+            </Grid>
+
+            <Grid Grid.Column="0" Grid.Row="1" RowSpacing="0" ColumnSpacing="0" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <StackLayout                
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Padding="30,0"
+                    Spacing="20">
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            Text="Snatch:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            Text="Clean and Jerk:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxTrainingCJ}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            Text="Squat:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxSquat}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal">
+
+                        <Label
+                            Text="Front Squat:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxFrontSquat}"/>
+                    </StackLayout>
+                </StackLayout>
+
+
+
+                <StackLayout                
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="StartAndExpand"
+                    Padding="30,0"
+                    Spacing="20">
+                    <StackLayout
+                            Orientation="Horizontal">
+                        <Label
+                            Text="Power Snatch:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxPowerSnatch}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            Text="Power Clean/Jerk:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.MaxPowerCJ}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            Text="Rack Jerk:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.RackJerk}"/>
+                    </StackLayout>
+
+                    <StackLayout
+                        Orientation="Horizontal">
+                        <Label
+                            Text="Power Jerk:"/>
+                        <Label
+                            HorizontalOptions="EndAndExpand"
+                            Text="{Binding AthleteDetails.PowerJerk}"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </Grid>
+            
+            <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="End">
+                <Button
+                    Margin="20"
+                    Text="{Binding EditProfileButton}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontSize="35"
+                    TextColor="White"
+                    WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60"
+                    BackgroundColor="#AC172A" 
+                    BorderRadius="30"
+                    Clicked="OnEditClicked"
+                    />
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

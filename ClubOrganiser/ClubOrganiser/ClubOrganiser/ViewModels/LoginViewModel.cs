@@ -26,17 +26,6 @@ namespace ClubOrganiser.ViewModels
             }
         }
 
-        //private Effect _showHiddenEntry;
-        //public Effect ShowHiddenEntry
-        //{
-        //    get { return new ShowHiddenEntryEffect(); }
-        //    //set
-        //    //{
-        //    //    _showHiddenEntry = value;
-        //    //    OnPropertyChanged("ShowHiddenEntry");
-        //    //}
-        //}
-
         public LoginViewModel()
         {
             BrandIcon = FontAwesome.FontAwesomeIcons.Android;

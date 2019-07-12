@@ -85,7 +85,7 @@ namespace ClubOrganiser.DataStores.Azure
                 IsInitialized = true;
                 var dbId = Settings.DatabaseId;
                 var path = $"syncstore{dbId}.db";
-                MobileService = new MobileServiceClient("https://xamarinevolveappdemo.azurewebsites.net");
+                MobileService = new MobileServiceClient("https://localhost:44385/");
                 store = new MobileServiceSQLiteStore(path);
                 //store.DefineTable<Category>();
                 //store.DefineTable<Favorite>();
@@ -102,7 +102,6 @@ namespace ClubOrganiser.DataStores.Azure
             }
 
             await MobileService.SyncContext.InitializeAsync(store, new MobileServiceSyncHandler()).ConfigureAwait(false);
-
             await LoadCachedTokenAsync().ConfigureAwait(false);
 
         }
@@ -218,6 +217,7 @@ namespace ClubOrganiser.DataStores.Azure
             //        await SaveSettingsAsync(settings);
             //    }
             //}
+            await Task.Delay(100);
         }
 
         public class StoreSettings

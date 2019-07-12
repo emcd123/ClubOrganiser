@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FFImageLoading.Forms.Platform;
 using Foundation;
 using UIKit;
 
@@ -24,6 +24,7 @@ namespace ClubOrganiser.iOS
         {
             global::Xamarin.Forms.Forms.Init();
             LeoJHarris.FormsPlugin.iOS.EnhancedEntryRenderer.Init();
+            CachedImageRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

@@ -27,7 +27,7 @@ namespace ClubOrganiser.Views
             var viewModelIsInherited = Children.First().BindingContext == this.BindingContext;
             if (viewModelIsInherited)
             {
-                System.Diagnostics.Debug.WriteLine("Yay, it works");
+                System.Diagnostics.Debug.WriteLine("Binding Initiliased for children");
             }
         }
 
