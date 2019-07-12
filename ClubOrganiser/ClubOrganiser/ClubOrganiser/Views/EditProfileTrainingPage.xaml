@@ -4,9 +4,18 @@
              x:Class="ClubOrganiser.Views.EditProfileTrainingPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <ScrollView>
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Example: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Example2: "/>
+                        <Entry />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
 
             <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                 <Button Text="Close" Clicked="OnClose"/>
