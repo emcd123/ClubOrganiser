@@ -163,14 +163,9 @@
                             Text="{Binding AthleteDetails.PowerJerk}"/>
                     </StackLayout>
 
-                    <!--<ffimageloadingsvg:SvgCachedImage WidthRequest="40" HeightRequest="40" Source="resource://ClubOrganiser.Images.edit.svg" BackgroundColor="#AC172A">
-                        <ffimageloadingsvg:SvgCachedImage.Transformations>
-                            <fftransformations:RoundedTransformation Radius="10"/>
-                        </ffimageloadingsvg:SvgCachedImage.Transformations>
-                    </ffimageloadingsvg:SvgCachedImage>-->
-
                 </StackLayout>
             </Grid>
+            
             <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="End">
                 <Button
                     Margin="20"
