@@ -22,7 +22,6 @@
 
   <ItemGroup>
     <EmbeddedResource Include="Images\edit.svg" />
-    <EmbeddedResource Include="Images\user.png" />
   </ItemGroup>
 
   <ItemGroup>
