@@ -30,10 +30,23 @@ namespace ClubOrganiser.ViewModels
                 OnPropertyChanged("ProfileIcon");
             }
         }
+
+        private string _editProfileButton;
+        public string EditProfileButton
+        {
+            get { return _editProfileButton; }
+            set
+            {
+                _editProfileButton = value;
+                OnPropertyChanged("EditProfileButton");
+            }
+        }
+
         public AthleteProfileViewModel()
         {
             AthleteDetails = MockData.GetMockProfile();
             ProfileIcon = FontAwesome.FontAwesomeIcons.UserCircle;
+            EditProfileButton = FontAwesome.FontAwesomeIcons.Wrench;
         }
     }
 }

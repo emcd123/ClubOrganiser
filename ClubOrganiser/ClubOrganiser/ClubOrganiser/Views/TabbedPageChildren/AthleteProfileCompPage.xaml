@@ -6,6 +6,7 @@
         <Grid RowSpacing="0" ColumnSpacing="0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
@@ -105,6 +106,20 @@
                             HorizontalOptions="EndAndExpand"
                             Text="{Binding AthleteDetails.SinclairCompetition}"/>
                 </StackLayout>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="0" HorizontalOptions="End">
+                <Button
+                    Margin="20"
+                    Text="{Binding EditProfileButton}"
+                    FontFamily="{StaticResource FontAwesomeSolid}"
+                    FontSize="35"
+                    TextColor="White"
+                    WidthRequest="60" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60"
+                    BackgroundColor="#AC172A" 
+                    BorderRadius="30"
+                    Clicked="OnEditClicked"
+                    />
             </StackLayout>
         </Grid>
     </ContentPage.Content>
