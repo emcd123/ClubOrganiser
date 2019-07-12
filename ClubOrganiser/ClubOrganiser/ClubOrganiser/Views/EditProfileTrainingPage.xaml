@@ -8,9 +8,9 @@
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
 
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Close"/>
-                <Button Text="Save"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button Text="Close" Clicked="OnClose"/>
+                <Button Text="Save" Clicked="OnSaved"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

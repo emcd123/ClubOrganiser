@@ -16,5 +16,15 @@ namespace ClubOrganiser.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        public async void OnClose(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+
+        public async void OnSaved(object sender, EventArgs e)
+        {
+            await Navigation.PopModalAsync();
+        }
+    }
 }
