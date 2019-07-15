@@ -7,11 +7,50 @@
             <ScrollView>
                 <StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Example: "/>
+                        <Label Text="Snatch: "/>
+                        <Entry
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Clean and Jerk: "/>
                         <Entry />
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Example2: "/>
+                        <Label Text="Squat: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Front Squat: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Power Snatch: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Power Clean/Jerk: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Rack Jerk: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Power Jerk: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Snatch Competition: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Clean and Jerk Competition: "/>
+                        <Entry />
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Total Competition: "/>
                         <Entry />
                     </StackLayout>
                 </StackLayout>

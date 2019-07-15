@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClubOrganiser.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace ClubOrganiser.Views
 		public EditProfileTrainingPage ()
 		{
 			InitializeComponent ();
+            BindingContext = Globals.ProfileVM;
 		}
 
         public async void OnClose(object sender, EventArgs e)
