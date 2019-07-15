@@ -11,7 +11,7 @@
                         <Entry
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
+                            Text="{Binding SnatchTraining}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Clean and Jerk: "/>

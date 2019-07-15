@@ -84,7 +84,7 @@
                             Text="Snatch:"/>
                         <Label
                             HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.MaxTrainingSnatch}"/>
+                            Text="{Binding SnatchTraining}"/>
                     </StackLayout>
 
                     <StackLayout

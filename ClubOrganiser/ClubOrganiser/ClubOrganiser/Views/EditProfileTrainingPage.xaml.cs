@@ -21,11 +21,15 @@ namespace ClubOrganiser.Views
 
         public async void OnClose(object sender, EventArgs e)
         {
+            Globals.ProfileVM.SnatchTraining = Globals.ProfileVM.AthleteDetails.MaxTrainingSnatch;
             await Navigation.PopModalAsync();
         }
 
         public async void OnSaved(object sender, EventArgs e)
         {
+            Globals.ProfileVM.AthleteDetails.MaxTrainingSnatch = Globals.ProfileVM.SnatchTraining;
+            // API Call(Not yet written)
+            // UpdateProfile(Globals.ProfileVM.AthleteDetails);
             await Navigation.PopModalAsync();
         }
     }

@@ -20,6 +20,17 @@ namespace ClubOrganiser.ViewModels
             }
         }
 
+        public int _snatchTraining;
+        public int SnatchTraining
+        {
+            get { return _snatchTraining; }
+            set
+            {
+                _snatchTraining = value;
+                OnPropertyChanged("SnatchTraining");
+            }
+        }
+
         private string _profileIcon;
         public string ProfileIcon
         {
@@ -47,6 +58,7 @@ namespace ClubOrganiser.ViewModels
             AthleteDetails = MockData.GetMockProfile();
             ProfileIcon = FontAwesome.FontAwesomeIcons.UserCircle;
             EditProfileButton = FontAwesome.FontAwesomeIcons.Wrench;
+            SnatchTraining = AthleteDetails.MaxTrainingSnatch;
         }
     }
 }
