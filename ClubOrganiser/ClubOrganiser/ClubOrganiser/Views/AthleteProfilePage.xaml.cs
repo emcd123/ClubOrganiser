@@ -1,4 +1,5 @@
-﻿using ClubOrganiser.ViewModels;
+﻿using ClubOrganiser.Helpers;
+using ClubOrganiser.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,7 @@ namespace ClubOrganiser.Views
 		public AthleteProfilePage ()
 		{
 			InitializeComponent ();
-            BindingContext = new AthleteProfileViewModel();
+            BindingContext = Globals.ProfileVM;
         }
 
         /// <summary>When overridden, allows application developers to customize behavior immediately prior to the <see cref="T:Xamarin.Forms.Page" /> becoming visible.</summary>
