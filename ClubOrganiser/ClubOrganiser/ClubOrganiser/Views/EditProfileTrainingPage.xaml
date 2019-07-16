@@ -18,70 +18,70 @@
                         <Entry
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxTrainingCJ}"/>
+                            Text="{Binding CleanAndJerkTraining}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Squat: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxSquat}"/>
+                            Text="{Binding Squat}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Front Squat: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxFrontSquat}"/>
+                            Text="{Binding FrontSquat}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Power Snatch: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxPowerSnatch}"/>
+                            Text="{Binding PowerSnatch}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Power Clean/Jerk: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxPowerCJ}"/>
+                            Text="{Binding PowerCJ}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Rack Jerk: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.RackJerk}"/>
+                            Text="{Binding RackJerk}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Power Jerk: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.PowerJerk}"/>
+                            Text="{Binding PowerJerk}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Snatch Competition: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxCompetitionSnatch}"/>
+                            Text="{Binding SnatchCompetition}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Clean and Jerk Competition: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxCompetitionCJ}"/>
+                            Text="{Binding CompetitionCJ}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Total Competition: "/>
                         <Entry 
                             HorizontalOptions="CenterAndExpand"
                             Keyboard="Numeric"
-                            Text="{Binding AthleteDetails.MaxCompetitionTotal}"/>
+                            Text="{Binding CompetitionTotal}"/>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>

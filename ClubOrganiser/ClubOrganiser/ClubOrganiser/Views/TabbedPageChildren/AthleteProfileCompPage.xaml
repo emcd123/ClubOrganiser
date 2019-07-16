@@ -63,7 +63,7 @@
                         Text="Weight Class:"/>
                     <Label
                         HorizontalOptions="EndAndExpand"
-                        Text="{Binding AthleteDetails.WeightClass}"/>
+                        Text="{Binding WeightClass}"/>
                 </StackLayout>
 
                 <StackLayout
@@ -73,7 +73,7 @@
                             Text="Snatch:"/>
                     <Label
                             HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.MaxCompetitionSnatch}"/>
+                            Text="{Binding SnatchCompetition}"/>
                 </StackLayout>
 
                 <StackLayout
@@ -83,7 +83,7 @@
                             Text="Clean and Jerk:"/>
                     <Label
                             HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.MaxCompetitionCJ}"/>
+                            Text="{Binding CompetitionCJ}"/>
                 </StackLayout>
 
                 <StackLayout
@@ -93,7 +93,7 @@
                             Text="Total:"/>
                     <Label
                             HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.MaxCompetitionTotal}"/>
+                            Text="{Binding CompetitionTotal}"/>
                 </StackLayout>
 
                 <StackLayout
@@ -104,7 +104,7 @@
                             Text="Sinclair:"/>
                     <Label
                             HorizontalOptions="EndAndExpand"
-                            Text="{Binding AthleteDetails.SinclairCompetition}"/>
+                            Text="{Binding SinclairCompetition}"/>
                 </StackLayout>
             </StackLayout>
 
