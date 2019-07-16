@@ -5,14 +5,83 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-                <StackLayout>
+                <StackLayout Padding="30,0">
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Example: "/>
-                        <Entry />
+                        <Label Text="Snatch: "/>
+                        <Entry
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding SnatchTraining}"/>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
-                        <Label Text="Example2: "/>
-                        <Entry />
+                        <Label Text="Clean and Jerk: "/>
+                        <Entry
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding CleanAndJerkTraining}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Squat: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding Squat}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Front Squat: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding FrontSquat}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Power Snatch: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding PowerSnatch}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Power Clean/Jerk: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding PowerCJ}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Rack Jerk: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding RackJerk}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Power Jerk: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding PowerJerk}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Snatch Competition: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding SnatchCompetition}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Clean and Jerk Competition: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding CompetitionCJ}"/>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Total Competition: "/>
+                        <Entry 
+                            HorizontalOptions="CenterAndExpand"
+                            Keyboard="Numeric"
+                            Text="{Binding CompetitionTotal}"/>
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
