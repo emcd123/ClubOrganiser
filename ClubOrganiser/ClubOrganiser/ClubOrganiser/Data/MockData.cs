@@ -24,5 +24,41 @@ namespace ClubOrganiser.Data
                 PowerJerk = 115
             };
         }
+
+        public static Session GetMockSession()
+        {
+            return new Session
+            {
+                EstimatedRPE = 9,
+                Excercises = GetMockExcerciseList(),
+                DayInProgram = 1,
+                WeekInProgram = 1,
+                IsCurrent = true,
+                IsCompleted = false
+            };
+        }
+
+        public static List<Excercise> GetMockExcerciseList()
+        {
+            return new List<Excercise>
+            {
+                new Excercise
+                {
+                    Name="Snatch",
+                    Classification = "Olympic Lifts",
+                    Reps = 2,
+                    Sets = 6,
+                    Percentage = 80
+                },
+                new Excercise
+                {
+                    Name="Clean and Jerk",
+                    Classification = "Olympic Lifts",
+                    Reps = 1,
+                    Sets = 5,
+                    Percentage = 70
+                }
+            };
+        }
     }
 }
