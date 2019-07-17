@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClubOrganiser.Views.NextSessionPage">
     <ContentPage.Content>
-        <StackLayout>
+        <StackLayout BackgroundColor="#F0EDED">
             <StackLayout Orientation="Horizontal">
                 <Label Text="Session Date: "
                     VerticalOptions="CenterAndExpand" 
@@ -18,28 +18,54 @@
 
             <ListView
                 ItemsSource="{Binding Excercises}"
-                ItemTapped="OnListViewItemTapped">
+                ItemTapped="OnListViewItemTapped"
+                SeparatorVisibility="None"
+                ListView.HasUnevenRows="True">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid Padding="10">
+                            <Grid Padding="20,10">
                                 <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
                                     <RowDefinition Height="*" />
                                 </Grid.RowDefinitions>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
+                                
+                                <BoxView
+                                    Grid.Column="0"
+                                    Grid.ColumnSpan="2"
+                                    Grid.Row="0"
+                                    Grid.RowSpan="2"
+                                    BackgroundColor="White"
+                                    CornerRadius="10"/>
+                                
                                 <Label
+                                    Margin="10,0,0,0"
                                    Grid.Row="0"
                                    Grid.Column="0"
                                    Text="{Binding Name}"
-                                   VerticalOptions="End" />
+                                   VerticalOptions="CenterAndExpand" />
                                 <Label
                                    Grid.Row="0"
                                    Grid.Column="1"
                                    Text="{Binding Reps}"
-                                   VerticalOptions="End" />
+                                   VerticalOptions="CenterAndExpand" />
+
+                                <StackLayout
+                                    Orientation="Horizontal"
+                                    Grid.Column="0"
+                                    Grid.Row="1"
+                                    Grid.ColumnSpan="2"                                    
+                                    HorizontalOptions="CenterAndExpand"
+                                    VerticalOptions="CenterAndExpand">
+                                    <Button 
+                                        Text="Skipped"/>
+                                    <Button
+                                        Text="Completed"/>
+                                </StackLayout>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
