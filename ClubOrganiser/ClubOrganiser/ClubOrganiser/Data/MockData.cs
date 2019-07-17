@@ -48,7 +48,7 @@ namespace ClubOrganiser.Data
                     Classification = "Olympic Lifts",
                     Reps = 2,
                     Sets = 6,
-                    Percentage = 80
+                    Percentage = "80"
                 },
                 new Excercise
                 {
@@ -56,7 +56,7 @@ namespace ClubOrganiser.Data
                     Classification = "Olympic Lifts",
                     Reps = 1,
                     Sets = 5,
-                    Percentage = 70
+                    Percentage = "70"
                 }
             };
         }
