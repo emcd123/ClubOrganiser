@@ -12,6 +12,7 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="2*" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
         <BoxView
@@ -72,6 +73,21 @@
                 VerticalOptions="CenterAndExpand" />
             <Label
                 Text="{Binding Percentage, StringFormat='{0:F0} %'}"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout
+            Margin="10,0,0,0"
+            Orientation="Horizontal"            
+            Grid.Row="1"
+            Grid.Column="3">
+            <Label
+                Text="Weight: "
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Text="{Binding ActualWeight}"
                 HorizontalOptions="StartAndExpand"
                 VerticalOptions="CenterAndExpand" />
         </StackLayout>

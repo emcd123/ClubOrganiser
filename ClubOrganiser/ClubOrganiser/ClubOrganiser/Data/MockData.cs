@@ -48,7 +48,8 @@ namespace ClubOrganiser.Data
                     Classification = "Olympic Lifts",
                     Reps = 2,
                     Sets = 6,
-                    Percentage = "80"
+                    Percentage = "80",
+                    ActualWeight = 73
                 },
                 new Excercise
                 {

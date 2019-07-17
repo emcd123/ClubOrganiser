@@ -24,11 +24,6 @@ namespace ClubOrganiser.ViewModels
             get { return MockData.GetMockExcerciseList(); }
         }
 
-        public string WeightPercentage
-        {
-            get { return null; }
-        }
-
         public NextSessionViewModel()
         {
             NextSession = MockData.GetMockSession();

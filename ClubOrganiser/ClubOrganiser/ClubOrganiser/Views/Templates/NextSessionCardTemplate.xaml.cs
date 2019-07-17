@@ -17,6 +17,7 @@ namespace ClubOrganiser.Views.Templates
 		public NextSessionCardTemplate ()
 		{
 			InitializeComponent ();
+            //ActualWeight.Text = (Globals.ProfileVM.GetProperty("") / (int)PercentageForLift) * 100;
         }
 
 	}
