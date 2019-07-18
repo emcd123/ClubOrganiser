@@ -58,7 +58,7 @@ namespace ClubOrganiser.Data
                 BackgroundColor = "#AC172A",
                 Icon = FontAwesomeIcons.ClipboardList,
                 IconFamily = "FontAwesomeSolid",
-                PageType = new Xamarin.Forms.NavigationPage(new SectionPage()),
+                PageType = new Xamarin.Forms.NavigationPage(new CurrentProgramPage()),
                 Column = 1,
                 Row = 1
             });

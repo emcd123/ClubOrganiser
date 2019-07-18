@@ -25,6 +25,24 @@ namespace ClubOrganiser.Data
             };
         }
 
+        public static Program GetMockProgram()
+        {
+            return new Program
+            {
+                EstimatedDurationInWeeks = 2,
+                DaysTrained = 3,
+                Sessions = GetMockSessions(),
+                ProgramClassification = "Classic",
+                IsCurrent = true,
+                IsCompleted = false
+            };
+        }
+
+        public static List<Session> GetMockSessions()
+        {
+            return new List<Session> { GetMockSession() };
+        }
+
         public static Session GetMockSession()
         {
             return new Session
@@ -60,6 +78,19 @@ namespace ClubOrganiser.Data
                     Sets = 5,
                     Percentage = "70"
                 }
+            };
+        }
+
+        public static Excercise GetMockExcercise()
+        {
+            return new Excercise
+            {
+                Name = "Snatch",
+                Classification = "Olympic Lifts",
+                Reps = 2,
+                Sets = 6,
+                Percentage = "80",
+                ActualWeight = 73
             };
         }
     }

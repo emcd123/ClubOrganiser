@@ -46,7 +46,7 @@ namespace ClubOrganiser.ViewModels
 
         public List<Excercise> Excercises
         {
-            get { return MockData.GetMockExcerciseList(); }
+            get { return NextSession.Excercises; }
         }
 
         public NextSessionViewModel()
