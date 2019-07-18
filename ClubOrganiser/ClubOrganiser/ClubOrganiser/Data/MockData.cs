@@ -31,10 +31,11 @@ namespace ClubOrganiser.Data
             {
                 EstimatedRPE = 9,
                 Excercises = GetMockExcerciseList(),
-                DayInProgram = 1,
+                DayInProgram = 2,
                 WeekInProgram = 1,
                 IsCurrent = true,
-                IsCompleted = false
+                IsCompleted = false,
+                IsFailed = false
             };
         }
 

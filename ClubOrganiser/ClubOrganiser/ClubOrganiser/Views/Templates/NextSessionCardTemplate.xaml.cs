@@ -20,5 +20,5 @@ namespace ClubOrganiser.Views.Templates
             //ActualWeight.Text = (Globals.ProfileVM.GetProperty("") / (int)PercentageForLift) * 100;
         }
 
-	}
+    }
 }
