@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:ClubOrganiser.Views.Templates"
+             x:Class="ClubOrganiser.Views.NextSessionPage">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Name="HomeButton" Order="Primary" Text="{Binding HomeIcon}" FontFamily="{StaticResource FontAwesomeSolid}" Priority="0"
+                    Clicked="HomeButton_Activated"/>
+    </ContentPage.ToolbarItems>-->
+    
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#F0EDED">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Session: "
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding NextSession.DayInProgram}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+
+                <Label Text="Week: "
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding NextSession.WeekInProgram}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+                
+                <Button Text="Options"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+
+            <ListView
+                ItemsSource="{Binding Excercises}"
+                ItemTapped="OnListViewItemTapped"
+                SeparatorVisibility="None"
+                ListView.HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <templates:NextSessionCardTemplate/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Label 
+                Text="Session Completed"
+                TextColor="Green"
+                HorizontalOptions="CenterAndExpand"
+                IsVisible="{Binding IsCompleted}"/>
+
+            <Label 
+                Text="Session Missed"
+                TextColor="Red"
+                HorizontalOptions="CenterAndExpand"
+                IsVisible="{Binding IsFailed}"/>
+            
+            <StackLayout
+                Orientation="Horizontal"
+                Grid.Column="0"
+                Grid.Row="2"
+                Grid.ColumnSpan="3"                                    
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand">
+                <Button 
+                    Text="Skipped"
+                    Command="{Binding TapMissedCommand}"
+                    CommandParameter="{Binding IsFailed}"/>
+                <Button
+                    Text="Completed"
+                    Command="{Binding TapCompleteCommand}"
+                    CommandParameter="{Binding IsCompleted}"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

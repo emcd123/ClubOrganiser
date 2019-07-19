@@ -19,5 +19,10 @@ namespace ClubOrganiser.ViewModels
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(property));
         }
+
+        public string HomeIcon
+        {
+            get { return FontAwesome.FontAwesomeIcons.Home; }
+        }
     }
 }

@@ -13,10 +13,10 @@ namespace ClubOrganiser.Helpers
         public static AthleteProfileViewModel ProfileVM = new AthleteProfileViewModel();
         public static IStoreManager StoreManagerInstance()
         {
-#if !UITEST
-            return new StoreManager();
-#else
+#if UITEST || DEBUG
             return new MockStoreManager();
+#else
+            return new StoreManager();
 #endif
         }
     }

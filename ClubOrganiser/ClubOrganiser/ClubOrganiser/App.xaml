@@ -5,6 +5,8 @@
              x:Class="ClubOrganiser.App">
     <Application.Resources>
         <ResourceDictionary>
+            
+            
             <OnPlatform x:TypeArguments="x:String" 
                 x:Key="FontAwesomeBrands">
                 <On Platform="Android" 

@@ -24,5 +24,75 @@ namespace ClubOrganiser.Data
                 PowerJerk = 115
             };
         }
+
+        public static Program GetMockProgram()
+        {
+            return new Program
+            {
+                EstimatedDurationInWeeks = 2,
+                DaysTrained = 3,
+                Sessions = GetMockSessions(),
+                ProgramClassification = "Classic",
+                FlatPercentageModifier = 5,
+                IsCurrent = true,
+                IsCompleted = false
+            };
+        }
+
+        public static List<Session> GetMockSessions()
+        {
+            return new List<Session> { GetMockSession() };
+        }
+
+        public static Session GetMockSession()
+        {
+            return new Session
+            {
+                EstimatedRPE = 9,
+                Excercises = GetMockExcerciseList(),
+                DayInProgram = 2,
+                WeekInProgram = 1,
+                IsCurrent = true,
+                IsCompleted = false,
+                IsFailed = false
+            };
+        }
+
+        public static List<Excercise> GetMockExcerciseList()
+        {
+            return new List<Excercise>
+            {
+                new Excercise
+                {
+                    Name="Snatch",
+                    Classification = "Olympic Lifts",
+                    Reps = 2,
+                    Sets = 6,
+                    Percentage = "80",
+                    ActualWeight = 73
+                },
+                new Excercise
+                {
+                    Name="Clean and Jerk",
+                    Classification = "Olympic Lifts",
+                    Reps = 1,
+                    Sets = 5,
+                    Percentage = "70"
+                }
+            };
+        }
+
+        public static Excercise GetMockExcercise()
+        {
+            return new Excercise
+            {
+                Name = "Snatch",
+                Classification = "Olympic Lifts",
+                Reps = 2,
+                Sets = 6,
+                Percentage = "80",
+                ActualWeight = 73
+            };
+        }
     }
 }

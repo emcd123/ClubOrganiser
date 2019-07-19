@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ViewCell  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ClubOrganiser.Views.Templates.NextSessionCardTemplate">
+    <Grid Padding="20,10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <BoxView
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                BackgroundColor="White"
+                CornerRadius="10"/>
+
+        <Label
+                Margin="10,0,0,0"
+                Grid.Row="0"
+                Grid.Column="0"
+                Grid.ColumnSpan="2"
+                Text="{Binding Name}"
+                VerticalOptions="CenterAndExpand" />
+
+        <Label
+                Grid.Row="0"
+                Grid.Column="2"
+                Text="{Binding Classification}"
+                VerticalOptions="CenterAndExpand" />
+
+        <StackLayout
+            Margin="10,0,0,0"
+            Orientation="Horizontal"            
+            Grid.Row="1"
+            Grid.Column="0">
+            <Label
+                Text="Reps: "
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Text="{Binding Reps}"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Text="Sets: "
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Text="{Binding Sets}"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout
+            Margin="10,0,0,0"
+            Orientation="Horizontal"            
+            Grid.Row="1"
+            Grid.Column="1">
+            <Label
+                Text="Percentage: "
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Text="{Binding Percentage, StringFormat='{0:F0} %'}"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+        <StackLayout
+            Margin="10,0,0,0"
+            Orientation="Horizontal"            
+            Grid.Row="1"
+            Grid.Column="2">
+            <Label
+                Text="Weight: "
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="CenterAndExpand" />
+            <Label
+                Text="{Binding ActualWeight}"
+                HorizontalOptions="StartAndExpand"
+                VerticalOptions="CenterAndExpand" />
+        </StackLayout>
+
+
+    </Grid>
+</ViewCell>
