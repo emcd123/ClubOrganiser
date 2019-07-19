@@ -45,6 +45,7 @@
             <Label 
                 Text="Session Completed"
                 TextColor="Green"
+                HorizontalOptions="CenterAndExpand"
                 IsVisible="{Binding IsCompleted}"/>
 
             <Label 

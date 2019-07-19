@@ -33,6 +33,7 @@ namespace ClubOrganiser.Data
                 DaysTrained = 3,
                 Sessions = GetMockSessions(),
                 ProgramClassification = "Classic",
+                FlatPercentageModifier = 5,
                 IsCurrent = true,
                 IsCompleted = false
             };

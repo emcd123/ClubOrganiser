@@ -18,5 +18,15 @@ namespace ClubOrganiser.Views
 			InitializeComponent ();
             BindingContext = new CurrentProgramViewModel();
 		}
-	}
+
+        public async void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            //This will open the selected element from the list and will open it again
+            // if the user goes back and tries to reopen the same element.
+
+            // But if they tap multiple times before the page opens it will open multiple times in a row
+            //Program tappedItem = e.Item as Program;
+            await Navigation.PushModalAsync(new NavigationPage(new SectionPage()));
+        }
+    }
 }

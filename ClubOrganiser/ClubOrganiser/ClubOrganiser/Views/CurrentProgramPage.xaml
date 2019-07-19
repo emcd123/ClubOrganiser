@@ -1,12 +1,53 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:ClubOrganiser.Views.Templates"
              x:Class="ClubOrganiser.Views.CurrentProgramPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Your Current Program!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout BackgroundColor="#F0EDED">
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Sessions Per Week: "
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding CurrentProgram.DaysTrained}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+
+                <Label Text="Weeks In Program: "
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding CurrentProgram.EstimatedDurationInWeeks}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Classification: "
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding CurrentProgram.ProgramClassification}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+
+                <Label Text="Percentage Modifier: "
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="CenterAndExpand" />
+                <Label Text="{Binding CurrentProgram.FlatPercentageModifier}"
+                    VerticalOptions="CenterAndExpand" 
+                    HorizontalOptions="StartAndExpand"/>
+            </StackLayout>
+            
+            <ListView
+                ItemsSource="{Binding Sessions}"
+                ItemTapped="OnListViewItemTapped"
+                SeparatorVisibility="None"
+                ListView.HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <templates:CurrentProgramCardTemplate/>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
