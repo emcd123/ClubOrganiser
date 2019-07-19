@@ -46,8 +46,8 @@
     <Compile Include="Helpers\Screenshot.cs" />
     <Compile Include="Helpers\HerlperInit.cs" />
     <Compile Include="TestDataStores.cs" />
-    <Compile Include="Tests.cs" />
     <Compile Include="AppInitializer.cs" />
+    <Compile Include="Tests\HomePageTest.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

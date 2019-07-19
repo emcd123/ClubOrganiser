@@ -17,10 +17,14 @@ namespace ClubOrganiser.Views
 		public LoginPage ()
 		{
 			InitializeComponent ();
+
+#if UITEST
+            LogInButton.AutomationId = "LogInButtonId";
+#endif
+
             var vm = new LoginViewModel();
             BindingContext = vm;
             PasswordField.Effects.Add( new ShowHiddenEntryEffect());
-
         }
 
         public async void DoLogin(object sender, System.EventArgs e)

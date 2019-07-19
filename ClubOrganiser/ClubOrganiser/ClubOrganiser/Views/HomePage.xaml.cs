@@ -18,6 +18,9 @@ namespace ClubOrganiser
 		public HomePage ()
 		{
 			InitializeComponent ();
+#if UITEST
+            HomePageName.AutomationId = "HomePageId";
+#endif
             //Initialise the viewmodel for this page
             var vm = new HomePageViewModel();
             BindingContext = vm;

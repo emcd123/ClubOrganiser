@@ -204,5 +204,6 @@ namespace UITest.Helpers
             app.Tap(x => x.Marked("hamburgerId"));
             Screenshot.TakeScreenShotPageOpen("Sidebar");
         }
+
     }
 }

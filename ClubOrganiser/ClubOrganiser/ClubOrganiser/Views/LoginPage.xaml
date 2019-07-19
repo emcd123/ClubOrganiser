@@ -58,6 +58,7 @@
                     Margin="0,5"/>
 
                 <Button
+                    x:Name="LogInButton"
                     Text="Sign In"
                     BackgroundColor="#6b2851"
                     TextColor="White"

@@ -34,6 +34,8 @@ namespace UITest
     {
         public static string Hamburger = "HamburgerId";
         public static string Home = "HomeId";
+        public static string LogInButton = "LogInButtonId";
+        public static string HomePage = "HomePageId";
     }
 
     #region Not Implemented yet

@@ -29,7 +29,7 @@ namespace UITest
             QueryLib.App = app;
             Screenshot.App = app;
             Picker.App = app;
-            Screenshot.EnableScreenshots(flag);
+            Screenshot.EnableScreenshots(false);
         }
     }
 }
