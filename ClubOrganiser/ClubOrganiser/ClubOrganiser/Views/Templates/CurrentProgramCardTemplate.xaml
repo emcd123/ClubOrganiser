@@ -2,16 +2,64 @@
 <ViewCell xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ClubOrganiser.Views.Templates.CurrentProgramCardTemplate">
-    
-        <StackLayout Orientation="Horizontal">
-            <Label 
-                    Text="Session:"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
-            <Label 
-                    Text="{Binding DayInProgram}"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
+    <StackLayout BackgroundColor="MintCream" Margin="30,10">
+        <StackLayout Margin="10,10">
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                            Text="Week:"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="Start" />
+                <Label 
+                            Text="{Binding WeekInProgram}"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="Start" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                            Text="Session:"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="Start" />
+                <Label 
+                            Text="{Binding DayInProgram}"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="Start" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                            Text="RPE:"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="Start" />
+                <Label 
+                            Text="{Binding EstimatedRPE}"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="Start" />
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label 
+                            Text="Estimated Duration:"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="Start" />
+                <Label 
+                            Text="{Binding EstimatedDuration}"
+                            VerticalOptions="CenterAndExpand" 
+                            HorizontalOptions="Start" />
+            </StackLayout>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <ListView
+                    ItemsSource="{Binding Excercises}"
+                    SeparatorVisibility="None"
+                    ListView.HasUnevenRows="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout>
+                                    <Label Text="{Binding Name}"/>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
-    
 </ViewCell>

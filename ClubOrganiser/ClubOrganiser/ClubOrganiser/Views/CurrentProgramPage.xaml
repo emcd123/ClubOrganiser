@@ -5,38 +5,34 @@
              x:Class="ClubOrganiser.Views.CurrentProgramPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#F0EDED">
-            <StackLayout Orientation="Horizontal">
-                <Label Text="Sessions Per Week: "
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
-                <Label Text="{Binding CurrentProgram.DaysTrained}"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="30,10,0,0">
+                    <Label Text="Sessions Per Week: "
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{Binding CurrentProgram.DaysTrained}"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
 
-                <Label Text="Weeks In Program: "
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
-                <Label Text="{Binding CurrentProgram.EstimatedDurationInWeeks}"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
-            </StackLayout>
-
-            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
-                <Label Text="Classification: "
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
-                <Label Text="{Binding CurrentProgram.ProgramClassification}"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
-
-                <!--<Label Text="Percentage Modifier: "
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="CenterAndExpand" />
-                <Label Text="{Binding CurrentProgram.FlatPercentageModifier}"
-                    VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>-->
-            </StackLayout>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="30,10,0,0">
+                    <Label Text="Weeks In Program: "
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{Binding CurrentProgram.EstimatedDurationInWeeks}"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
             
+                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand" Margin="30,10,0,0">
+                    <Label Text="Classification: "
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="CenterAndExpand" />
+                    <Label Text="{Binding CurrentProgram.ProgramClassification}"
+                        VerticalOptions="CenterAndExpand" 
+                        HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+            </StackLayout>
             <ListView
                 ItemsSource="{Binding Sessions}"
                 ItemTapped="OnListViewItemTapped"
