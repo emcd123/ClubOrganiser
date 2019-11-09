@@ -52,46 +52,44 @@ namespace ClubOrganiser.ViewModels
         public NextSessionViewModel()
         {
             NextSession = MockData.GetMockSession();
-            IsCompleted = NextSession.IsCompleted;
-            IsFailed = NextSession.IsFailed;
         }
 
-        public Command TapCompleteCommand
-        {
-            get
-            {
-                return new Command(async val => {
-                    bool data;
-                    if (val != null)
-                    {
-                        data = (bool)val;
-                        if (!data)
-                        {                            
-                            NextSession.IsCompleted = true;
-                            IsCompleted = true;
-                        }
-                    }
-                });
-            }
-        }
+        //public Command TapCompleteCommand
+        //{
+        //    get
+        //    {
+        //        return new Command(async val => {
+        //            bool data;
+        //            if (val != null)
+        //            {
+        //                data = (bool)val;
+        //                if (!data)
+        //                {                            
+        //                    NextSession.IsCompleted = true;
+        //                    IsCompleted = true;
+        //                }
+        //            }
+        //        });
+        //    }
+        //}
 
-        public Command TapMissedCommand
-        {
-            get
-            {
-                return new Command(async val => {
-                    bool data;
-                    if (val != null)
-                    {
-                        data = (bool)val;
-                        if (!data)
-                        {
-                            NextSession.IsFailed = true;
-                            IsFailed = true;
-                        }
-                    }
-                });
-            }
-        }
+        //public Command TapMissedCommand
+        //{
+        //    get
+        //    {
+        //        return new Command(async val => {
+        //            bool data;
+        //            if (val != null)
+        //            {
+        //                data = (bool)val;
+        //                if (!data)
+        //                {
+        //                    NextSession.IsFailed = true;
+        //                    IsFailed = true;
+        //                }
+        //            }
+        //        });
+        //    }
+        //}
     }
 }

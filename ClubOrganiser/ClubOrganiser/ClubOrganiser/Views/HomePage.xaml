@@ -9,19 +9,20 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
                 <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <!--<RowDefinition Height="*" />-->
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
             <!--FontFamily="{Binding HomePageTilesList[0], Converter={StaticResource FontConverter}}"-->
-            <StackLayout AutomationId="HelloLabel" x:Name="TopLeft" 
-                            Grid.Row="{Binding HomePageTilesList[0].Row}"
-                            Grid.Column="{Binding HomePageTilesList[0].Column}" 
-                            VerticalOptions="FillAndExpand"
-                            HorizontalOptions="FillAndExpand"                             
-                            BackgroundColor="{Binding HomePageTilesList[0].BackgroundColor}">
+            <StackLayout
+                x:Name="TopLeft" 
+                Grid.Row="{Binding HomePageTilesList[0].Row}"
+                Grid.Column="{Binding HomePageTilesList[0].Column}" 
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"                             
+                BackgroundColor="{Binding HomePageTilesList[0].BackgroundColor}">
                 <Label Text="{Binding HomePageTilesList[0].Icon}"
                     FontFamily="{StaticResource FontAwesomeSolid}"
                     TextColor="White"
@@ -109,7 +110,7 @@
                 </StackLayout.GestureRecognizers>
             </StackLayout>
 
-            <StackLayout x:Name="BottomLeft"
+            <!--<StackLayout x:Name="BottomLeft"
                         Grid.Row="{Binding HomePageTilesList[4].Row}"
                              Grid.Column="{Binding HomePageTilesList[4].Column}" 
                              VerticalOptions="FillAndExpand"
@@ -154,7 +155,7 @@
                 <StackLayout.GestureRecognizers>
                     <TapGestureRecognizer Command="{Binding TapCommand}" CommandParameter="{Binding HomePageTilesList[5]}" NumberOfTapsRequired="1"/>
                 </StackLayout.GestureRecognizers>
-            </StackLayout>
+            </StackLayout>-->
         </Grid>
     </ContentPage.Content>
 </ContentPage>

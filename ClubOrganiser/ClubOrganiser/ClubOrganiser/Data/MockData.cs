@@ -29,13 +29,10 @@ namespace ClubOrganiser.Data
         {
             return new Program
             {
-                EstimatedDurationInWeeks = 2,
+                EstimatedDurationInWeeks = 1,
                 DaysTrained = 3,
                 Sessions = GetMockSessions(),
                 ProgramClassification = "Classic",
-                FlatPercentageModifier = 5,
-                IsCurrent = true,
-                IsCompleted = false
             };
         }
 
@@ -51,10 +48,7 @@ namespace ClubOrganiser.Data
                 EstimatedRPE = 9,
                 Excercises = GetMockExcerciseList(),
                 DayInProgram = 2,
-                WeekInProgram = 1,
-                IsCurrent = true,
-                IsCompleted = false,
-                IsFailed = false
+                WeekInProgram = 1
             };
         }
 

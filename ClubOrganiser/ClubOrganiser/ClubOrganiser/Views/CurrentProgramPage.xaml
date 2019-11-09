@@ -21,7 +21,7 @@
                     HorizontalOptions="StartAndExpand"/>
             </StackLayout>
 
-            <StackLayout Orientation="Horizontal">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
                 <Label Text="Classification: "
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand" />
@@ -29,12 +29,12 @@
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="StartAndExpand"/>
 
-                <Label Text="Percentage Modifier: "
+                <!--<Label Text="Percentage Modifier: "
                     VerticalOptions="CenterAndExpand" 
                     HorizontalOptions="CenterAndExpand" />
                 <Label Text="{Binding CurrentProgram.FlatPercentageModifier}"
                     VerticalOptions="CenterAndExpand" 
-                    HorizontalOptions="StartAndExpand"/>
+                    HorizontalOptions="StartAndExpand"/>-->
             </StackLayout>
             
             <ListView

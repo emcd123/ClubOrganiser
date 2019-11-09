@@ -30,61 +30,73 @@ namespace ClubOrganiser.Data
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 2,
-                Title = "Your Next Session",
+                Title = "Upload Session",
                 BackgroundColor = "#02264A ",
-                Icon = FontAwesomeIcons.ClipboardList,
+                Icon = FontAwesomeIcons.CloudUploadAlt,
                 IconFamily = "FontAwesomeSolid",
-                PageType = new Xamarin.Forms.NavigationPage(new NextSessionPage()),
+                PageType = new Xamarin.Forms.NavigationPage(new UploadSessionPage()),
                 Column = 1,
                 Row = 0
             });
 
+            //HomePageTilesList.Add(new HomePageTileItem()
+            //{
+            //    Id = 2,
+            //    Title = "Your Next Session",
+            //    BackgroundColor = "#02264A ",
+            //    Icon = FontAwesomeIcons.ClipboardList,
+            //    IconFamily = "FontAwesomeSolid",
+            //    PageType = new Xamarin.Forms.NavigationPage(new NextSessionPage()),
+            //    Column = 1,
+            //    Row = 0
+            //});
+
+            //HomePageTilesList.Add(new HomePageTileItem()
+            //{
+            //    Id = 3,
+            //    Title = "Your Competitions",
+            //    Icon = FontAwesomeIcons.Calendar,
+            //    IconFamily = "FontAwesomeSolid",
+            //    BackgroundColor = "#02264A",
+            //    PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
+            //    Column = 0,
+            //    Row = 1
+            //});
+
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 3,
-                Title = "Your Competitions",
-                Icon = FontAwesomeIcons.Calendar,
-                IconFamily = "FontAwesomeSolid",
-                BackgroundColor = "#02264A",
-                PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
-                Column = 0,
-                Row = 1
-            });
-
-            HomePageTilesList.Add(new HomePageTileItem()
-            {
-                Id = 4,
                 Title = "Your Program",
-                BackgroundColor = "#AC172A",
+                BackgroundColor = "#02264A",
                 Icon = FontAwesomeIcons.ClipboardList,
                 IconFamily = "FontAwesomeSolid",
                 PageType = new Xamarin.Forms.NavigationPage(new CurrentProgramPage()),
-                Column = 1,
+                Column = 0,
                 Row = 1
             });
 
-            HomePageTilesList.Add(new HomePageTileItem()
-            {
-                Id = 5,
-                Title = "Club News",
-                BackgroundColor = "#AC172A",
-                Icon = FontAwesomeIcons.ExclamationCircle,
-                IconFamily = "FontAwesomeSolid",
-                PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
-                Column = 0,
-                Row = 2
-            });
+            //HomePageTilesList.Add(new HomePageTileItem()
+            //{
+            //    Id = 5,
+            //    Title = "Club News",
+            //    BackgroundColor = "#AC172A",
+            //    Icon = FontAwesomeIcons.ExclamationCircle,
+            //    IconFamily = "FontAwesomeSolid",
+            //    PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
+            //    Column = 0,
+            //    Row = 2
+            //});
 
             HomePageTilesList.Add(new HomePageTileItem()
             {
                 Id = 6,
                 Title = "Contact Coach",
-                BackgroundColor = "#02264A",
+                BackgroundColor = "#AC172A",
                 Icon = FontAwesomeIcons.Envelope,
                 IconFamily = "FontAwesomeSolid",
                 PageType = new Xamarin.Forms.NavigationPage(new ComingSoon()),
                 Column = 1,
-                Row = 2
+                Row = 1
             });
 
             return HomePageTilesList;
